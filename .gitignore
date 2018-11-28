@@ -1,0 +1,15 @@
+*.project
+*.classpath
+.gradle
+build/
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!gradle-wrapper.jar
+bin/
+*.pmd
+.settings/
+target/
+
+#Docker deploy artifacts ignore
+oolsum-api/src/main/docker/*.json
+oolsum-api/src/main/docker/*.war
+oolsum-api/src/main/docker/.aws
