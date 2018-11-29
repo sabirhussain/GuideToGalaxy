@@ -12,10 +12,10 @@ public class TestApplication {
     @Test
     public void shouldAnswerQuestion() {
         StringBuilder sb = new StringBuilder();
-        sb.append("blog is I\n");
-        sb.append("blog Gold is 2 Credits\n");
-        sb.append("how many Credits is blog Gold ?\n");
-        sb.append("how much is blog ?\n");
+        sb.append(" blog  is  I\n");
+        sb.append(" blog  Gold  is 2 Credits\n");
+        sb.append(" how many  Credits is blog Gold ?\n");
+        sb.append(" how much  is blog ?\n");
         sb.append("DONE");
         ByteArrayInputStream in = new ByteArrayInputStream(sb.toString().getBytes());
         ByteArrayOutputStream out = new ByteArrayOutputStream();

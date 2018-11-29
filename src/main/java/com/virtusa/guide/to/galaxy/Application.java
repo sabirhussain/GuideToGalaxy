@@ -14,6 +14,8 @@ public class Application {
             System.out.println("Start Input (To end type DONE)");
 
             for (String line = sc.nextLine(); !"DONE".equals(line); line = sc.nextLine()) {
+                line = line.replaceAll("\\s{2,}", " ").trim();
+
                 if (GalaxyMaster.INSTANCE.feedKnowledge(line, unknownStatements))
                     continue;
 
