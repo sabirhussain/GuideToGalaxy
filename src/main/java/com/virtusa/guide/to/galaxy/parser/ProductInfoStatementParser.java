@@ -14,7 +14,7 @@ public enum ProductInfoStatementParser implements StatementParser {
 
     @Override
     public boolean parse(String statement) {
-        String[] parts = statement.split("is");
+        String[] parts = statement.split("\\bis\\b");
         Optional<ProductInfo> optional = getProductInfo(parts[0]);
 
         if (optional.isPresent()) {

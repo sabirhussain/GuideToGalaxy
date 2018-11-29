@@ -17,6 +17,6 @@ public class TestRomanExpressionEvaluator {
 
     @Test
     public void shouldGetArabicNumeralExpression() {
-        Assert.assertEquals(24, RomanExpressionEvaluator.INSTANCE.evaluate("XIV"), 0);
+        Assert.assertEquals(14, RomanExpressionEvaluator.INSTANCE.evaluate("XIV"), 0);
     }
 }

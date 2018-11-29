@@ -26,23 +26,25 @@ public enum RomanExpressionEvaluator implements ExpressionEvaluator {
 
             if (last == 0) {
                 last = current;
+                ex.append(last);
                 continue;
             }
 
-            ex.append(getExpression(last, current));
+            addExpression(last, current, ex);
             last = current;
         }
-
-        if (ex.length() == 0)
-            ex.append(last);
 
         return ex.toString();
     }
 
-    private String getExpression(int lastNum, int currentNum) {
-        if (lastNum < currentNum)
-            return currentNum + "-" + lastNum;
+    private void addExpression(int lastNum, int currentNum, StringBuilder ex) {
+        if (lastNum < currentNum) {
+            int lastNumLen = String.valueOf(lastNum).length();
+            ex.delete(ex.length() - lastNumLen, ex.length());
+            ex.append(currentNum).append("-").append(lastNum);
+            return;
+        }
 
-        return lastNum + "+" + currentNum;
+        ex.append("+").append(currentNum);
     }
 }
